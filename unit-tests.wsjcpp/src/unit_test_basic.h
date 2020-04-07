@@ -1,9 +1,9 @@
 #ifndef UNIT_TEST_BASIC_H
 #define UNIT_TEST_BASIC_H
 
-#include <unit_tests.h>
+#include <wsjcpp_unit_tests.h>
 
-class UnitTestBasic : public UnitTestBase {
+class UnitTestBasic : public WsjcppUnitTestBase {
     public:
         UnitTestBasic();
         virtual void init();

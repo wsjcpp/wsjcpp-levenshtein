@@ -1,5 +1,6 @@
 wsjcpp-levenshtein
 tmp/*
+.wsjcpp/*
 
 # Prerequisites
 *.d

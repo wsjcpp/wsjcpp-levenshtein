@@ -3,10 +3,10 @@
 #include <iostream>
 #include <wsjcpp_levenshtein.h>
 
-REGISTRY_UNIT_TEST(UnitTestBasic)
+REGISTRY_WSJCPP_UNIT_TEST(UnitTestBasic)
 
 UnitTestBasic::UnitTestBasic()
-    : UnitTestBase("UnitTestBasic") {
+    : WsjcppUnitTestBase("UnitTestBasic") {
     //
 }
 
