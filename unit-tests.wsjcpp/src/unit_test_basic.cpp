@@ -39,7 +39,7 @@ bool UnitTestBasic::run() {
     bool bTestSuccess = true;
     for (unsigned int i = 0; i < vTestLines.size(); i++) {
         LineTest test = vTestLines[i];
-        int nGotDistance = WSJCppLevenshtein::distance(test.s1, test.s2);
+        int nGotDistance = WsjcppLevenshtein::distance(test.s1, test.s2);
         compareN(bTestSuccess, "compare ", nGotDistance, test.nExpectedDistance);
     }
     return bTestSuccess;
