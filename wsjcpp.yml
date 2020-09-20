@@ -2,7 +2,7 @@ wsjcpp_version: v0.0.1
 cmake_minimum_required: 3.0
 cmake_cxx_standard: 11
 name: "wsjcpp-levenshtein"
-version: "v0.1.0"
+version: "v0.1.1"
 description: "Calculation Levenshtein Distance"
 issues: "https://github.com/wsjcpp/wsjcpp-levenstein/issues"
 keywords:
@@ -13,7 +13,7 @@ keywords:
 
 dependencies:
   - name: "wsjcpp-core"
-    version: "v0.1.1"
+    version: "v0.2.1"
     url: "https://github.com/wsjcpp/wsjcpp-core:master"
     origin: "https://github.com/"
     installation-dir: "./src.wsjcpp/wsjcpp_core"

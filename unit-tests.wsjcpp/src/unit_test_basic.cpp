@@ -12,13 +12,14 @@ UnitTestBasic::UnitTestBasic()
 
 // ---------------------------------------------------------------------
 
-void UnitTestBasic::init() {
+bool UnitTestBasic::doBeforeTest() {
     // nothing
+    return true;
 }
 
 // ---------------------------------------------------------------------
 
-bool UnitTestBasic::run() {
+void UnitTestBasic::executeTest() {
 
     struct LineTest {
         LineTest(std::string s1, std::string s2, int nExpectedDistance) 
@@ -36,11 +37,16 @@ bool UnitTestBasic::run() {
     vTestLines.push_back(LineTest("111111111111111", "1111111112111111", 1));
     vTestLines.push_back(LineTest("!@#$%^&*()_+", "!@#%$^&*()+", 3));
 
-    bool bTestSuccess = true;
     for (unsigned int i = 0; i < vTestLines.size(); i++) {
         LineTest test = vTestLines[i];
-        int nGotDistance = WSJCppLevenshtein::distance(test.s1, test.s2);
-        compareN(bTestSuccess, "compare ", nGotDistance, test.nExpectedDistance);
+        int nGotDistance = WsjcppLevenshtein::distance(test.s1, test.s2);
+        compare("compare " + std::to_string(i), nGotDistance, test.nExpectedDistance);
     }
-    return bTestSuccess;
+}
+
+// ---------------------------------------------------------------------
+
+bool UnitTestBasic::doAfterTest() {
+    // nothing
+    return true;
 }
